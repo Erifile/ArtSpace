@@ -1,0 +1,22 @@
+let passwords = document.querySelectorAll(".password");
+let message = document.querySelector("#message");
+let submit = document.querySelector("#submit");
+let isDark = false;
+
+
+passwords.forEach((elem)=>{
+    elem.addEventListener("input", () => {
+        if(passwords[0].value !== passwords[1].value)
+            {
+                message.style.color = "red";
+                message.textContent = "Введенные пароли не совпадают";
+                submit.setAttribute("disabled", "");
+            } 
+        else 
+            {
+                message.style.color = "green";
+                message.textContent = "Введенные пароли совпадают";
+                submit.removeAttribute("disabled");
+            }
+    })
+})
