@@ -1,0 +1,131 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body
+{
+    display: flex;
+    background-color: rgb(146, 179, 164);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.sessionMsg
+{
+    display: flex;
+    justify-self: flex-start;
+}
+
+#Wrap
+{
+    display: flex;
+    flex-direction: column;
+    width: fit-content; /* подстраивается под форму */
+    border: 1px solid;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+
+h1
+{
+    font-size: 50px;
+}
+h2
+{
+    font-size: 40px;
+}
+#title
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* подстраивается под #Wrap, который подстраивается под форму */
+    height: 150px;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+#form
+{
+    width: 500px;
+    height: 700px;
+    border-top: 1px solid;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: border 0.2s linear;
+}
+#form > input::placeholder
+{
+    color: rgb(19, 17, 17);
+}
+
+
+#form > .inputs
+{
+    display: flex;
+    flex-direction: column; /* justify-content align-items меняются, кто за что отвечает? */
+    width: 85%;
+    height: 50%;
+    justify-self: center;
+    align-self: center;
+    margin-top: auto; /* расположение по центру */
+    margin-bottom: auto; /* расположение по центру */
+    align-items: center; /* действует на label */
+    align-content: center; /* действует на input */
+    gap: 5px;
+}
+.inputs > input
+{
+    width: 100%;
+    height: 10%;
+    border: 0px solid;
+    background-color: rgb(212, 216, 148);
+}
+.inputs > input:hover
+{
+    border-left: 5px solid;
+}
+.inputs > input[type="submit"] /* селектор по type */
+{
+    width: 80%;
+    height: 10%;
+    margin-top: auto;  /* расположение посередине пространства под input-ами */
+    margin-bottom: auto; /* расположение посередине пространства под input-ами */
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+.inputs > input[type="submit"]:hover
+{
+    background-color: rgb(167, 172, 97);
+}
+
+@media screen and (max-width: 500px)
+{ 
+    #form
+    {
+        width: 450px;
+    }
+}
+@media screen and (max-width: 450px)
+{ 
+    #form
+    {
+        width: 400px;
+    }
+}
+
+
+
+
+
+
+
