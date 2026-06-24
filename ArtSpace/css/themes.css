@@ -1,0 +1,70 @@
+/* По умолчанию Светлая*/
+:root {
+  --bg-primary: rgb(132, 179, 161);
+  --bg-secondary: #4fa16f;
+  --header-primary: rgb(110, 139, 82);
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --accent-color: #7fbd5ba9;
+  --accent-hover: #862c2c;
+  --input-bg: #ffffff;
+  --message-bg: #f8d7da;
+  --message-text: #721c24;
+  --message-border: #f5c6cb;
+  
+  scroll-behavior: smooth;
+}
+
+/* Тёмная тема (если нажата кнопка) */
+[data-theme="dark"]  {
+  --bg-primary: #263d3a;
+  --bg-secondary: #1d412b;
+  --header-primary: rgb(70, 90, 52);
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8b8;
+  --border-color: #2c2c3e;
+  --accent-color: #b1a82f;
+  --accent-hover: #8b7df2;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --input-bg: #0f0f1a;
+  --message-bg: #2c1a1e;
+  --message-text: #f8d7da;
+  --message-border: #721c24;
+}
+/* Светлая тема (если нажата кнопка) */
+[data-theme="light"]
+{
+  --bg-primary: rgb(132, 179, 161);
+  --bg-secondary: #4fa16f;
+  --header-primary: rgb(173, 223, 126);
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --accent-color: #b8af38;
+  --accent-hover: #862c2c;
+  --input-bg: #ffffff;
+  --message-bg: #f8d7da;
+  --message-text: #721c24;
+  --message-border: #f5c6cb;
+}
+
+/* если стоит предпочтение в тёмной теме
+@media (prefers-color-scheme: dark)
+{
+  :root  {
+  --bg-primary: #263d3a;
+  --bg-secondary: #1d412b;
+  --header-primary: rgb(70, 90, 52);
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8b8;
+  --border-color: #2c2c3e;
+  --accent-color: #b1a82f;
+  --accent-hover: #8b7df2;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --input-bg: #0f0f1a;
+  --message-bg: #2c1a1e;
+  --message-text: #f8d7da;
+  --message-border: #721c24;
+}
+} */

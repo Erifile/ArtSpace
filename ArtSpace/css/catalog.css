@@ -1,0 +1,61 @@
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+.mClassCard {
+  display: grid;
+  width: 350px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  background: var(--accent-color);
+  font-family: sans-serif;
+  overflow: hidden; /* Скрывает контент, который выходит за границы */
+  gap: 5px;
+  text-align: center;
+}
+
+/* cкрытый блок */
+.mClassMore {
+  display: grid;
+  grid-template-rows: 0fr; /* Изначально высота равна 0 */
+  transition: grid-template-rows 0.3s ease-out; /* Плавное раскрытие */
+}
+
+/* внутренний контейнер обязателен для анимации через Grid */
+.moreInner {
+  overflow: hidden; 
+  display: flex;
+    flex-direction: column; 
+    width: 100%; /* Гарантирует, что блок не сжимается по ширине */
+}
+
+.moreInner h4, .moreInner p {
+    white-space: normal;
+    word-break: break-word;
+}
+
+.btns
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.btns > button
+{
+  width: 50%;
+  align-self: center;
+}
+
+
+
+/* Класс, который мы будем добавлять через JS при раскрытии */
+.mClassCard.is-expanded > .mClassMore {
+  grid-template-rows: 1fr; /* Раскрывает блок на всю высоту контента */
+}

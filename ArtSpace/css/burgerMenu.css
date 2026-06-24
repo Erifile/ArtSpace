@@ -1,0 +1,60 @@
+.burgerBtn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  cursor: pointer;
+  z-index: 2;
+}
+.burgerBtn > span
+{
+    width: 80%;
+    border: 1px solid;
+}
+.menu {
+  position: absolute;
+  top: 100%;
+  width: 100px; /* Задаем фиксированную ширину меню */
+  background: #ffffff;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  /* Точка, откуда начинается анимация - верхний центр меню */
+  transform-origin: top center;
+  transform: scaleY(0);
+  visibility: hidden;
+  transition: transform 0.3s ease, opacity 0.2s ease, visibility 0.3s, top 0.3s;
+
+  z-index: 1;
+}
+.menu.open
+{
+transform: scaleY(1); /* Возвращаем меню к реальной высоте */
+visibility: visible;
+top: 100%;
+}
+span
+{
+  transition: all 0.3s ease;
+}
+.span1
+{
+  transform: translateY(10px);
+  rotate: 45deg;
+}
+.span2
+{
+  opacity: 0;
+}
+.span3
+{
+  transform: translateY(-10px);
+  rotate: -45deg;
+}
